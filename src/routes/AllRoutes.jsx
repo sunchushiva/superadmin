@@ -4,6 +4,7 @@ import Register from "../pages/Register";
 import Dashboard from "../pages/Dashboard";
 import Analytics from "../pages/Analytics";
 import Profile from "../pages/Profile";
+import AnalyticDetail from "../pages/AnalyticDetail";
 
 export default function AllRoutes() {
   return (
@@ -11,6 +12,7 @@ export default function AllRoutes() {
       <Route path="/" element={<Login />} />
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/analytics" element={<Analytics />} />
+      <Route path="/analytics/:type" element={<AnalyticDetail />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />

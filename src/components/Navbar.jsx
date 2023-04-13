@@ -1,4 +1,15 @@
-import { Box, Heading } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  Text,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuGroup,
+  Icon,
+} from "@chakra-ui/react";
+import { SlUser } from "react-icons/sl";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
@@ -14,58 +25,87 @@ export default function Navbar() {
       zIndex="1000000"
       bg="#393646"
       color="#F4EEE0"
+      marginBottom={["40px", "60px", "80px"]}
     >
       <Box>
         <Link to="/dashboard">
-          <Heading as="h1" fontSize={["20px", "25px", "30px"]}>
+          <Heading as="h1" fontSize={["12px", "20px", "25px", "30px"]}>
             ADMIN PANEL
           </Heading>
         </Link>
       </Box>
       <Box>
         <Link to="/analytics">
-          <Heading
-            as="h2"
-            fontSize={["12px", "16px", "20px"]}
-            color="#7a6ea3"
+          <Text
+            fontSize={["10px", "15px", "20px"]}
+            color="#887ab4"
             transition="0.35s"
             _hover={{
               color: "#F4EEE0",
+              fontWeight: "450",
+              // textDecoration: "underline",
+              // textUnderlineOffset: "6px"
             }}
           >
             User Analytics
-          </Heading>
+          </Text>
         </Link>
       </Box>
       <Box>
         <Link to="/dashboard">
-          <Heading
-            as="h2"
-            fontSize={["12px", "16px", "20px"]}
-            color="#7a6ea3"
+          <Text
+            fontSize={["10px", "15px", "20px"]}
+            color="#887ab4"
             transition="0.35s"
             _hover={{
               color: "#F4EEE0",
+              fontWeight: "450",
+              // textDecoration: "underline",
+              // textUnderlineOffset: "6px"
             }}
           >
             Main Website
-          </Heading>
+          </Text>
         </Link>
       </Box>
       <Box>
-        <Link to="/profile">
-          <Heading
-            as="h2"
-            fontSize={["12px", "16px", "20px"]}
-            color="#7a6ea3"
+        <Menu>
+          <MenuButton
+            cursor="pointer"
+            as={Text}
+            fontSize={["10px", "15px", "20px"]}
+            color="#F4EEE0"
             transition="0.35s"
-            _hover={{
-              color: "#F4EEE0",
-            }}
+            // _hover={{
+            //   color: "#F4EEE0",
+            //   fontWeight: "450",
+            // }}
           >
+            <Icon as={SlUser} color="#F4EEE0" marginRight="10px" />
             Profile
-          </Heading>
-        </Link>
+          </MenuButton>
+          <MenuList>
+            <MenuGroup color="#6D5D6E" title="Profile">
+              <MenuItem
+                color="#887ab4"
+                _hover={{
+                  color: "black",
+                }}
+              >
+                <Link to="/profile">My Account</Link>
+              </MenuItem>
+              <MenuItem
+                color="#887ab4"
+                _hover={{
+                  color: "black",
+                }}
+                onClick={() => console.log("Logout")}
+              >
+                Logout{" "}
+              </MenuItem>
+            </MenuGroup>
+          </MenuList>
+        </Menu>
       </Box>
     </Box>
   );
