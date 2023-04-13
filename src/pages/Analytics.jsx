@@ -1,7 +1,10 @@
+import { Box } from "@chakra-ui/react";
+import AnalyticComponent from "../components/AnalyticComponent";
+
 export default function Analytics() {
   return (
-    <div className="Analytics">
-      <h1>Analytics page</h1>
-    </div>
+    <Box width="80%" margin="auto">
+      <AnalyticComponent />
+    </Box>
   );
 }
