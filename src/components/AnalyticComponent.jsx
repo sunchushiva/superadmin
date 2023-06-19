@@ -26,7 +26,7 @@ export default function AnalyticComponent() {
     },
   ];
   return (
-    <Box marginBottom="80px">
+    <Box marginBottom="60px">
       <Box textAlign="center" marginBottom="50px">
         <Text fontSize={["18px", "20px", "25px", "30px"]} fontWeight="450">
           YOUR listings Statistics
@@ -42,6 +42,7 @@ export default function AnalyticComponent() {
             <Link to={`/analytics/${el.type}`}>
               <Box
                 border="1px solid rgb(210,210,210,0.6)"
+                backgroundColor="#F4EEE0"
                 display="flex"
                 alignItems="center"
                 justifyContent="center"
@@ -58,6 +59,7 @@ export default function AnalyticComponent() {
                     as="h3"
                     fontSize={["15px", "20px", "25px", "30px"]}
                     marginBottom={["6px", "10px"]}
+                    color="#393646"
                   >
                     {el.count}
                   </Heading>

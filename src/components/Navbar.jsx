@@ -25,7 +25,7 @@ export default function Navbar() {
       zIndex="1000000"
       bg="#393646"
       color="#F4EEE0"
-      marginBottom={["40px", "60px", "80px"]}
+      marginBottom={["50px", "60px", "70px"]}
     >
       <Box>
         <Link to="/dashboard">

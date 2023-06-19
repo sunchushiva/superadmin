@@ -9,14 +9,15 @@ import {
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Toast from "./Toast";
 // import { USERCALL } from "../redux/actions";
 // import { useDispatch } from "react-redux";
 
 const initialState = {
-  email: "",
-  password: "",
-  referral: "",
-  name: "",
+  email: null,
+  password: null,
+  referral: null,
+  name: null,
 };
 
 export default function RegisterForm() {

@@ -99,7 +99,6 @@ export default function DashboardComponent() {
             {lists.map((el, i) => {
               return (
                 <Box>
-                  <CloseButton title="Delete" />
                   <Link key={i} to={`/category/${el}`}>
                     <Box
                       bg="#4F4557"
@@ -123,6 +122,7 @@ export default function DashboardComponent() {
                       </Text>
                     </Box>
                   </Link>
+                  <CloseButton aria-label="Delete" />
                 </Box>
               );
             })}

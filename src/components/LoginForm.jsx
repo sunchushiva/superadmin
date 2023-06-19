@@ -14,8 +14,8 @@ import { Link, useNavigate } from "react-router-dom";
 // import { useDispatch } from "react-redux";
 
 const initialState = {
-  email: "",
-  password: "",
+  email: null,
+  password: null,
 };
 
 export default function LoginForm() {
