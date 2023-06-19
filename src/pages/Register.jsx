@@ -5,7 +5,7 @@ export default function Register() {
   return (
     <Box
       marginTop={["40px", "60px", "80px"]}
-      marginBottom={["60px", "80px", "100px"]}
+      marginBottom={["60px", "80px", "80px"]}
     >
       <RegisterForm />
     </Box>
